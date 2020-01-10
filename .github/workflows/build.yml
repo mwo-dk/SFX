@@ -17,4 +17,4 @@ jobs:
       with:
         dotnet-version: 3.1.100
     - name: Test
-      run: dotnet test DotNet/SFX.sln --configuration Release 
+      run: dotnet test ./SFX.sln --configuration Release 
