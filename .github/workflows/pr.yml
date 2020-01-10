@@ -1,0 +1,21 @@
+name: .NET Core
+
+on:  pull_request
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.100
+    - name: Test
+      run: dotnet test DotNet/SFX.sln --configuration Release 
+    - name: Build NuGet Packages
+      run: dotnet pack DotNet/SFX.sln --configuration Release --include-symbols -p:SymbolPackageFormat=snupkg -o ./nuget
+    - name: Deploy NuGet Packages
+      run: dotnet nuget push /home/runner/work/DotNetSFX/SFX/nuget/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
