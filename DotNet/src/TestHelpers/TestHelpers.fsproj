@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>SFX.TestHelpers</RootNamespace>
+    <PackageId>SFX.TestHelpers</PackageId>
+    <Version>$(Version)</Version>
+    <FileVersion>$(Version)</FileVersion>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <IsPackable>true</IsPackable>
+
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Authors>Michael W. Olesen</Authors>
+    <Company>-</Company>
+    <Description>A few functions wrapping stuff from xUnit for convenience in F#</Description>
+    <Copyright>Michael W. Olesen</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/mwo-dk/SFX</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mwo-dk/SFXs</RepositoryUrl>
+    <PackageIcon>dingir.png</PackageIcon>
+    <PackageTags>xUnit F#</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Library.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="dingir.png" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.4.1" />
+  </ItemGroup>
+
+</Project>
