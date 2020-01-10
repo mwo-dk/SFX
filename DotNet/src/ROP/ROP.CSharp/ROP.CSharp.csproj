@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>SFX.CSROP</RootNamespace>
+    <PackageId>SFX.ROP</PackageId>
+    <Version>$(Version)</Version>
+    <FileVersion>$(Version)</FileVersion>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <IsPackable>true</IsPackable>
+
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Authors>Michael W. Olesen</Authors>
+    <Company>-</Company>
+    <Description>The small ROP library from Scott Wlashin's note on Railway Oriented Programming</Description>
+    <Copyright>Michael W. Olesen</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/mwo-dk/SFX</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mwo-dk/SFX</RepositoryUrl>
+    <PackageTags>railway oriented programming F# C#</PackageTags>
+    <PackageIcon>dingir.png</PackageIcon>
+
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="dingir.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+    </ItemGroup>
+  </Target>
+  <ItemGroup>
+    <ProjectReference Include="..\ROP.FSharp\ROP.FSharp.fsproj">
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <IncludeAssets>SFX.ROP.FSharp.dll</IncludeAssets>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
