@@ -10,15 +10,17 @@
     <IsPackable>true</IsPackable>
 
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Authors>Michael W. Olesen</Authors>
+    <Authors>$(Authors)</Authors>
     <Company>-</Company>
     <Description>A few functions wrapping stuff from xUnit for convenience in F#</Description>
-    <Copyright>Michael W. Olesen</Copyright>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/mwo-dk/SFX</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/mwo-dk/SFXs</RepositoryUrl>
+    <Copyright>$(Copyright)</Copyright>
+    <PackageLicenseExpression>$(PackageLicenseExpression)</PackageLicenseExpression>
+    <PackageProjectUrl>$(PackageProjectUrl)</PackageProjectUrl>
+    <RepositoryUrl>$"(RepositoryUrl)</RepositoryUrl>
     <PackageIcon>dingir.png</PackageIcon>
     <PackageTags>xUnit F#</PackageTags>
+
+    <IsTestProject>false</IsTestProject>
   </PropertyGroup>
 
   <ItemGroup>

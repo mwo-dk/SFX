@@ -10,11 +10,11 @@
     <IsPackable>true</IsPackable>
 
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Authors>Michael W. Olesen</Authors>
+    <Authors>$(Authors)</Authors>
     <Company>-</Company>
     <Description>The small ROP library from Scott Wlashin's note on Railway Oriented Programming</Description>
-    <Copyright>Michael W. Olesen</Copyright>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>$(Copyright)</Copyright>
+    <PackageLicenseExpression>$(PackageLicenseExpression)</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/mwo-dk/SFX</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mwo-dk/SFX</RepositoryUrl>
     <PackageTags>railway oriented programming F# C#</PackageTags>
