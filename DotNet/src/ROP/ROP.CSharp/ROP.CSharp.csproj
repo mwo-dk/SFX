@@ -9,9 +9,9 @@
     <AssemblyVersion>$(Version)</AssemblyVersion>
     <IsPackable>true</IsPackable>
 
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>$(PackageLicenseExpression)</PackageRequireLicenseAcceptance>
     <Authors>$(Authors)</Authors>
-    <Company>-</Company>
+    <Company>$(Company)</Company>
     <Description>The small ROP library from Scott Wlashin's note on Railway Oriented Programming</Description>
     <Copyright>$(Copyright)</Copyright>
     <PackageLicenseExpression>$(PackageLicenseExpression)</PackageLicenseExpression>
@@ -21,7 +21,8 @@
     <PackageIcon>dingir.png</PackageIcon>
 
     <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
-  </PropertyGroup>
+  
+</PropertyGroup>
 
   <ItemGroup>
     <None Include="dingir.png" Pack="true" PackagePath="\" />

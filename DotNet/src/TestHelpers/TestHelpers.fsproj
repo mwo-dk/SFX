@@ -9,9 +9,9 @@
     <AssemblyVersion>$(Version)</AssemblyVersion>
     <IsPackable>true</IsPackable>
 
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>$(PackageLicenseExpression)</PackageRequireLicenseAcceptance>
     <Authors>$(Authors)</Authors>
-    <Company>-</Company>
+    <Company>$(Company)</Company>
     <Description>A few functions wrapping stuff from xUnit for convenience in F#</Description>
     <Copyright>$(Copyright)</Copyright>
     <PackageLicenseExpression>$(PackageLicenseExpression)</PackageLicenseExpression>
