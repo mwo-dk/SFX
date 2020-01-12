@@ -14,6 +14,7 @@ Programming languages are/will be:
 * **Utils** a set of basic helper routines for ie application development. For details, see [the readme](doc/DotNet/README.Utils.md)
 * **EventAggregation** basic utilities to do in-process decoupled event aggregation. For details, see [the readme](doc/DotNet/README.EventAggregation.md)
 * **Random** basic utilities to generate random data based on [RNGCryptoServiceProvider](https://referencesource.microsoft.com/#mscorlib/system/security/cryptography/rngcryptoserviceprovider.cs,d525bf7d9ca1d38a). For details, see [the readme](doc/DotNet/README.Random.md)
+* **Gower** implementation of Gower similarity coefficient. For details, see [the readme](doc/DotNet/README.Gower.md)
 
 ## C/C++
 

@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+    <GenerateProgramFile>false</GenerateProgramFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Helpers.fs" />
+    <Compile Include="GowerConstantsTests.fs" />
+    <Compile Include="floatActivePatternTests.fs" />
+    <Compile Include="dichotomousAsymmetricSimilarityTests.fs" />
+    <Compile Include="dichotomousSymmetricSimilarityTests.fs" />
+    <Compile Include="qualitativeSimilarityTests.fs" />
+    <Compile Include="quantitativeSimilarityTests.fs" />
+    <Compile Include="isNumberTests.fs" />
+    <Compile Include="getRangeTests.fs" />
+    <Compile Include="withAsymmetricDichotomousCharacterTests.fs" />
+    <Compile Include="withSymmetricDichotomousCharacterTests.fs" />
+    <Compile Include="withQualitativeCharacterTests.fs" />
+    <Compile Include="withQuantitativeCharacterTests.fs" />
+    <Compile Include="getSijTests.fs" />
+    <Compile Include="createAsymmetricDichotomousTests.fs" />
+    <Compile Include="createSymmetricDichotomousTests.fs" />
+    <Compile Include="createQualitativeTests.fs" />
+    <Compile Include="createQuantitativeTests.fs" />
+    <Compile Include="fromConfigTests.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FsCheck.Xunit" Version="2.14.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+    <PackageReference Include="SFX.TestHelpers" Version="1.0.11" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="1.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Gower\Gower.FSharp\Gower.FSharp.fsproj" />
+  </ItemGroup>
+
+</Project>
