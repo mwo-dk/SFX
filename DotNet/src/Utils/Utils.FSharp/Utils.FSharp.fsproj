@@ -2,8 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <RootNamespace>SFX.CSROP</RootNamespace>
-    <PackageId>SFX.ROP</PackageId>
+    <AssemblyName>SFX.Utils</AssemblyName>
+
+    <RootNamespace>SFX.Utils</RootNamespace>
+    <PackageId>SFX.Utils</PackageId>
     <Version>$(Version)</Version>
     <FileVersion>$(Version)</FileVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>
@@ -11,17 +13,22 @@
 
     <Authors>$(Authors)</Authors>
     <Company>$(Company)</Company>
-    <Description>The small ROP library from Scott Wlashin's note on Railway Oriented Programming</Description>
+    <Description>A small library facilitating simple utility functions</Description>
     <Copyright>$(Copyright)</Copyright>
     <PackageLicenseExpression>$(PackageLicenseExpression)</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/mwo-dk/SFX</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mwo-dk/SFX</RepositoryUrl>
-    <PackageTags>railway oriented programming F# C#</PackageTags>
     <PackageIcon>dingir.png</PackageIcon>
+    <PackageTags>utilities F#</PackageTags>
+
 
     <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
-</PropertyGroup>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Library.fs" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="dingir.png" Pack="true" PackagePath="\" />
@@ -34,9 +41,11 @@
   </Target>
   
   <ItemGroup>
-    <ProjectReference Include="..\ROP.FSharp\ROP.FSharp.fsproj">
+    <ProjectReference Include="..\..\ROP\ROP.FSharp\ROP.FSharp.fsproj">
       <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>ROP.FSharp.dll</IncludeAssets>
+      <IncludeAssets>SFX.Utils.CSharp.dll</IncludeAssets>
     </ProjectReference>
+    <ProjectReference Include="..\Utils.CSharp\Utils.CSharp.csproj" />
   </ItemGroup>
+
 </Project>

@@ -15,6 +15,7 @@
     <Description>A few functions wrapping stuff from xUnit for convenience in F#</Description>
     <Copyright>$(Copyright)</Copyright>
     <PackageLicenseExpression>$(PackageLicenseExpression)</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>$(PackageProjectUrl)</PackageProjectUrl>
     <RepositoryUrl>$"(RepositoryUrl)</RepositoryUrl>
     <PackageIcon>dingir.png</PackageIcon>
