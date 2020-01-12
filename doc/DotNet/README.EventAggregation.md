@@ -1,8 +1,5 @@
 # SFX.EventAggregation
-Simple event aggregator library. This repo contains two libraries:
-
-* A C# library, which can be fetched on nuget: [SFX.EventAggregation.CSharp](https://www.nuget.org/packages/SFX.EventAggregation.CSharp/).
-* And an F# library, which can be fetched on nuget: [SFX.EventAggregation](https://www.nuget.org/packages/SFX.EventAggregation/).
+Simple event aggregator library for event aggregation in F# and C#. Can be found on nuget: [SFX.EventAggregation](https://www.nuget.org/packages/SFX.EventAggregation/).
 
 The library simply facilitates strongly typed event aggregators, that:
 
