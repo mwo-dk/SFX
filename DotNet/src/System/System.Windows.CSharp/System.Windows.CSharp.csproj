@@ -20,6 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ROP\ROP.CSharp\ROP.CSharp.csproj">
+      <IncludeAssets>all</IncludeAssets>
+    </ProjectReference>
     <ProjectReference Include="..\System.CSharp\System.CSharp.csproj">
       <IncludeAssets>all</IncludeAssets>
     </ProjectReference>

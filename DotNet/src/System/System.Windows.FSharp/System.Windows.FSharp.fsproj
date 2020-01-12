@@ -42,12 +42,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ROP\ROP.FSharp\ROP.FSharp.fsproj">
+    <ProjectReference Include="..\..\ROP\ROP.CSharp\ROP.CSharp.csproj">
       <IncludeAssets>all</IncludeAssets>
     </ProjectReference>
-    <ProjectReference Include="..\System.Windows.CSharp\System.Windows.CSharp.csproj">
+    <ProjectReference Include="..\System.FSharp\System.FSharp.fsproj">
       <IncludeAssets>all</IncludeAssets>
     </ProjectReference>
+    <ProjectReference Include="..\System.Windows.CSharp\System.Windows.CSharp.csproj" />
   </ItemGroup>
 
 </Project>
