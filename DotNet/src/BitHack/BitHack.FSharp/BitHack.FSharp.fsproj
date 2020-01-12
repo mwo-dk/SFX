@@ -2,10 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <AssemblyName>SFX.Random</AssemblyName>
-    <RootNamespace>SFX.Random</RootNamespace>
+    <AssemblyName>SFX.BitHack</AssemblyName>
 
-    <PackageId>SFX.Random</PackageId>
+    <RootNamespace>SFX.BitHack</RootNamespace>
+    <PackageId>SFX.BitHack</PackageId>
     <Version>$(Version)</Version>
     <FileVersion>$(Version)</FileVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>
@@ -13,14 +13,14 @@
 
     <Authors>$(Authors)</Authors>
     <Company>$(Company)</Company>
-    <Description>A small utilizing RNGCryptoServiceProvider as a standard random generator</Description>
+    <Description>A small library for working with bit-arrays based on 64 bit signed integers in F#</Description>
     <Copyright>$(Copyright)</Copyright>
     <PackageLicenseExpression>$(PackageLicenseExpression)</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/mwo-dk/SFX</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mwo-dk/SFX</RepositoryUrl>
     <PackageIcon>dingir.png</PackageIcon>
-    <PackageTags>random RNGCryptoServiceProvider F#</PackageTags>
+    <PackageTags>bit array F#</PackageTags>
 
     <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
   </PropertyGroup>
@@ -36,13 +36,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="dingir.png" Pack="true" PackagePath="\"/>
+    <None Include="dingir.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Random.CSharp\Random.CSharp.csproj">
+    <ProjectReference Include="..\..\ROP\ROP.FSharp\ROP.FSharp.fsproj">
       <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>SFX.Random.CSharp.dll</IncludeAssets>
+      <IncludeAssets>SDX.BitHack.CSharp.dll</IncludeAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\BitHack.CSharp\BitHack.CSharp.csproj">
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <IncludeAssets>SDX.BitHack.CSharp.dll</IncludeAssets>
     </ProjectReference>
   </ItemGroup>
 
