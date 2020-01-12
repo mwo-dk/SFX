@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>SFX.EventAggregation</AssemblyName>
+
+    <RootNamespace>SFX.EventAggregation</RootNamespace>
+    <PackageId>SFX.EventAggregation</PackageId>
+    <Version>$(Version)</Version>
+    <FileVersion>$(Version)</FileVersion>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <IsPackable>true</IsPackable>
+
+    <Authors>$(Authors)</Authors>
+    <Company>$(Company)</Company>
+    <Description>A small library facilitating asynchronous event aggregation</Description>
+    <Copyright>$(Copyright)</Copyright>
+    <PackageLicenseExpression>$(PackageLicenseExpression)</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://github.com/mwo-dk/SFX</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mwo-dk/SFX</RepositoryUrl>
+    <PackageIcon>dingir.png</PackageIcon>
+    <PackageTags>event aggregation F#</PackageTags>
+
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+  </PropertyGroup>
+
+  <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+    </ItemGroup>
+  </Target>
+  
+  <ItemGroup>
+    <Compile Include="Library.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="dingir.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ROP\ROP.FSharp\ROP.FSharp.fsproj">
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <IncludeAssets>ROP.FSharp.dll</IncludeAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utils\Utils.CSharp\Utils.CSharp.csproj">
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <IncludeAssets>SFX.Utils.CSharp.dll</IncludeAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\EventAggregation.CSharp\EventAggregation.CSharp.csproj">
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <IncludeAssets>SFX.EventAggregation.CSharp.dll</IncludeAssets>
+    </ProjectReference>
+  </ItemGroup>
+
+</Project>

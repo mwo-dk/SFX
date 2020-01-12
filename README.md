@@ -10,8 +10,9 @@ Programming languages are/will be:
 
 ## DotNet
 
-* **ROP** is for Railway Oriented Programming, a term set by Scott Wlashin. For details, see [the readme](DotNet/src/ROP/ROP.CSharp/README.md)
-* **Utils** a set of basic helper routines for ie application development. For details, see [the readme](DotNet/src/Utils/Utils.FSharp/README.md)
+* **ROP** is for Railway Oriented Programming, a term set by Scott Wlashin. For details, see [the readme](doc/DotNet/README.ROP.md)
+* **Utils** a set of basic helper routines for ie application development. For details, see [the readme](doc/DotNet/README.Utils.md)
+* **EventAggregation** basic utilities to do in-process decoupled event aggregation. For details, see [the readme](doc/DotNet/README.EventAggregation.md)
 
 ## C/C++
 
