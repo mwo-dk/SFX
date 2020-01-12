@@ -1,7 +1,7 @@
 ﻿using AutoFixture;
 using FsCheck;
 using FsCheck.Xunit;
-using SFX.EventAggregation.Model;
+using SFX.CSharp.EventAggregation.Model;
 using System;
 using Xunit;
 using static System.String;

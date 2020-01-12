@@ -1,7 +1,7 @@
-﻿using SFX.CSROP;
+﻿using SFX.CSharp.ROP;
 using System;
 
-namespace SFX.Utils.Infrastructure
+namespace SFX.CSharp.Utils.Infrastructure
 {
     /// <summary>
     /// Interface describing the capability to create <see cref="ITimer"/>s

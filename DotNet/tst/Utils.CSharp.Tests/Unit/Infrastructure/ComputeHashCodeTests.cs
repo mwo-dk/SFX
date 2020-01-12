@@ -2,7 +2,7 @@ using AutoFixture;
 using System;
 using System.Linq;
 using Xunit;
-using static SFX.Utils.Infrastructure.HashCodeHelpers;
+using static SFX.CSharp.Utils.Infrastructure.HashCodeHelpers;
 
 namespace SFX.Utils.Test.Unit.Infrastructure
 {

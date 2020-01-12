@@ -1,8 +1,8 @@
-﻿namespace SFX
+﻿namespace SFX.CSharp.Gower
 {
     using System;
-    using System.Linq;
     using System.Collections.Generic;
+    using System.Linq;
     using static System.Double;
     using static System.Math;
 
@@ -36,7 +36,7 @@
         internal static (double, bool) QualitativeSimilarity<T>(T x, T y)
             where T : IEquatable<T> =>
             x.Equals(y) ? _1_1 : _0_1;
-        internal static (double, bool) QuantitativeSimilarity(double x, double y, double range) 
+        internal static (double, bool) QuantitativeSimilarity(double x, double y, double range)
         {
             if (range == 0.0)
                 return (NaN, false);
@@ -57,8 +57,8 @@
             return (b - a, true);
         }
 
-        public static GowerConfiguration<T> 
-            WithAsymmetricDichotomousCharacter<T>(this GowerConfiguration<T> conf, 
+        public static GowerConfiguration<T>
+            WithAsymmetricDichotomousCharacter<T>(this GowerConfiguration<T> conf,
             Func<T, bool> character)
         {
             if (character is null)

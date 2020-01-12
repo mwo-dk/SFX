@@ -2,7 +2,7 @@
 using System.Linq;
 using static System.Math;
 
-namespace SFX.BitHack.CSharp
+namespace SFX.CSharp.BitHack
 {
     /// <summary>
     /// Extensions methods for working on bit-arrays based on 64 bit signed <see cref="Int64"/>s

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace SFX.Utils.Infrastructure
+namespace SFX.CSharp.Utils.Infrastructure
 {
     /// <summary>
     /// Describes the capability of being initializable in an asynchronous manner

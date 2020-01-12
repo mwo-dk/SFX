@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>SFX.Utils.CSharp</AssemblyName>
 
-    <RootNamespace>SFX.Utils.CSharp</RootNamespace>
+    <RootNamespace>SFX.CSharp.Utils</RootNamespace>
     <PackageId>SFX.Utils.CSharp</PackageId>
     <Version>$(Version)</Version>
     <FileVersion>$(Version)</FileVersion>

@@ -1,10 +1,10 @@
-﻿using SFX.EventAggregation.Model;
+﻿using SFX.CSharp.EventAggregation.Model;
 using System;
 using System.Collections.Concurrent;
 using System.Threading;
 using static System.Threading.Interlocked;
 
-namespace SFX.EventAggregation.Infrastructure
+namespace SFX.CSharp.EventAggregation.Infrastructure
 {
     /// <summary>
     /// Implements <see cref="IEventAggregatorRepository"/>

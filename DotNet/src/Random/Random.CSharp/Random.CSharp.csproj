@@ -2,8 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    
     <AssemblyName>SFX.Random.CSharp</AssemblyName>
-    <RootNamespace>SFX.Random.CSharp</RootNamespace>
+    <RootNamespace>SFX.CSharp.Random</RootNamespace>
 
     <Version>$(Version)</Version>
     <FileVersion>$(Version)</FileVersion>

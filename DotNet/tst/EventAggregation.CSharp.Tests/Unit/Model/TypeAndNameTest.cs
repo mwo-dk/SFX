@@ -1,10 +1,10 @@
 ﻿using AutoFixture;
 using FsCheck;
 using FsCheck.Xunit;
-using SFX.EventAggregation.Model;
+using SFX.CSharp.EventAggregation.Model;
 using System;
 using Xunit;
-using static SFX.Utils.Infrastructure.HashCodeHelpers;
+using static SFX.CSharp.Utils.Infrastructure.HashCodeHelpers;
 using static System.String;
 
 namespace SFX.EventAggregation.Test.Unit.Model

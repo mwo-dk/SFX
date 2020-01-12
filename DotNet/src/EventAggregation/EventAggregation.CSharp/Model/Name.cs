@@ -1,7 +1,7 @@
 ﻿using System;
 using static System.String;
 
-namespace SFX.EventAggregation.Model
+namespace SFX.CSharp.EventAggregation.Model
 {
     /// <summary>
     /// Represents the name of an <see cref="IEventAggregator{T}"/>

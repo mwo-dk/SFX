@@ -2,7 +2,7 @@
 
 open SFX.ROP
 open SFX.ROP.Bridge
-open SFX.Utils.Infrastructure
+open SFX.CSharp.Utils.Infrastructure
 
 module Time =
 
@@ -57,7 +57,7 @@ module Timer =
     /// An exception has occurred
     | Other of exn
 
-    let private toResult (x: SFX.CSROP.Result<'a>) =
+    let private toResult (x: SFX.CSharp.ROP.Result<'a>) =
         if x.Error |> isNull then () |> succeed
         else 
             if (x.Error :?> ObjectDisposedException) <> null then TimerDisposed |> fail

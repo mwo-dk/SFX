@@ -2,10 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    
     <AssemblyName>SFX.EventAggregation</AssemblyName>
-
     <RootNamespace>SFX.EventAggregation</RootNamespace>
     <PackageId>SFX.EventAggregation</PackageId>
+    
     <Version>$(Version)</Version>
     <FileVersion>$(Version)</FileVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>
@@ -41,16 +42,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\ROP\ROP.FSharp\ROP.FSharp.fsproj">
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>ROP.FSharp.dll</IncludeAssets>
+      <IncludeAssets>all</IncludeAssets>
     </ProjectReference>
     <ProjectReference Include="..\..\Utils\Utils.CSharp\Utils.CSharp.csproj">
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>SFX.Utils.CSharp.dll</IncludeAssets>
+      <IncludeAssets>all</IncludeAssets>
     </ProjectReference>
     <ProjectReference Include="..\EventAggregation.CSharp\EventAggregation.CSharp.csproj">
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>SFX.EventAggregation.CSharp.dll</IncludeAssets>
+      <IncludeAssets>all</IncludeAssets>
     </ProjectReference>
   </ItemGroup>
 

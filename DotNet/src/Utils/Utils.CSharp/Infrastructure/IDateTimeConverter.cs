@@ -1,7 +1,7 @@
-﻿using SFX.CSROP;
+﻿using SFX.CSharp.ROP;
 using System;
 
-namespace SFX.Utils.Infrastructure
+namespace SFX.CSharp.Utils.Infrastructure
 {
     /// <summary>
 	/// Facilitates to convert <see cref="DateTimeOffset"/>s between

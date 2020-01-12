@@ -2,10 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    
     <AssemblyName>SFX.BitHack</AssemblyName>
-
-    <RootNamespace>SFX.BitHack</RootNamespace>
     <PackageId>SFX.BitHack</PackageId>
+    
     <Version>$(Version)</Version>
     <FileVersion>$(Version)</FileVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>
@@ -41,12 +41,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\ROP\ROP.FSharp\ROP.FSharp.fsproj">
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>SDX.BitHack.CSharp.dll</IncludeAssets>
+      <IncludeAssets>all</IncludeAssets>
     </ProjectReference>
     <ProjectReference Include="..\BitHack.CSharp\BitHack.CSharp.csproj">
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>SDX.BitHack.CSharp.dll</IncludeAssets>
+      <IncludeAssets>all</IncludeAssets>
     </ProjectReference>
   </ItemGroup>
 
