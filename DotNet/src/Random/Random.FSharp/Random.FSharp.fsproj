@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>SFX.Random</AssemblyName>
+    <RootNamespace>SFX.Random</RootNamespace>
+
+    <PackageId>SFX.Random</PackageId>
+    <Version>$(Version)</Version>
+    <FileVersion>$(Version)</FileVersion>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <IsPackable>true</IsPackable>
+
+    <Authors>$(Authors)</Authors>
+    <Company>$(Company)</Company>
+    <Description>A small utilizing RNGCryptoServiceProvider as a standard random generator</Description>
+    <Copyright>$(Copyright)</Copyright>
+    <PackageLicenseExpression>$(PackageLicenseExpression)</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://github.com/mwo-dk/SFX</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mwo-dk/SFX</RepositoryUrl>
+    <PackageIcon>dingir.png</PackageIcon>
+    <PackageTags>random RNGCryptoServiceProvider F#</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Library.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="dingir.png" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Random.CSharp\Random.CSharp.csproj" />
+  </ItemGroup>
+
+</Project>

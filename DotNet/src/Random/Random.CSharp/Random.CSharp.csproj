@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>SFX.Random.CSharp</AssemblyName>
+    <RootNamespace>SFX.Random.CSharp</RootNamespace>
+
+    <Version>$(Version)</Version>
+    <FileVersion>$(Version)</FileVersion>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="System.Memory" Version="4.5.3" />
+  </ItemGroup>
+
+</Project>

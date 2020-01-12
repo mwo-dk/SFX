@@ -13,6 +13,7 @@ Programming languages are/will be:
 * **ROP** is for Railway Oriented Programming, a term set by Scott Wlashin. For details, see [the readme](doc/DotNet/README.ROP.md)
 * **Utils** a set of basic helper routines for ie application development. For details, see [the readme](doc/DotNet/README.Utils.md)
 * **EventAggregation** basic utilities to do in-process decoupled event aggregation. For details, see [the readme](doc/DotNet/README.EventAggregation.md)
+* **Random** basic utilities to generate random data based on [RNGCryptoServiceProvider](https://referencesource.microsoft.com/#mscorlib/system/security/cryptography/rngcryptoserviceprovider.cs,d525bf7d9ca1d38a). For details, see [the readme](doc/DotNet/README.Random.md)
 
 ## C/C++
 
