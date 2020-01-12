@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SFX.EventAggregation.Infrastructure
+namespace SFX.CSharp.EventAggregation.Infrastructure
 {
     /// <summary>
     /// Interface describing the capability to handle messages of <see cref="Type"/> <typeparamref name="T"/>

@@ -1,8 +1,8 @@
-﻿using SFX.EventAggregation.Model;
-using SFX.Utils.Infrastructure;
+﻿using SFX.CSharp.EventAggregation.Model;
+using SFX.CSharp.Utils.Infrastructure;
 using System;
 
-namespace SFX.EventAggregation.Infrastructure
+namespace SFX.CSharp.EventAggregation.Infrastructure
 {
     /// <summary>
     /// Interface to supply event aggregators

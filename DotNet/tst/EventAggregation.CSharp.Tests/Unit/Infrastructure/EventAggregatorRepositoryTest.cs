@@ -1,8 +1,8 @@
 ﻿using AutoFixture;
 using FakeItEasy;
-using SFX.EventAggregation.Infrastructure;
-using SFX.EventAggregation.Model;
-using SFX.Utils.Infrastructure;
+using SFX.CSharp.EventAggregation.Infrastructure;
+using SFX.CSharp.EventAggregation.Model;
+using SFX.CSharp.Utils.Infrastructure;
 using System;
 using Xunit;
 using static FakeItEasy.A;

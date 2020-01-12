@@ -1,7 +1,7 @@
 ﻿module SFX.BitHack
 
 open SFX.ROP
-open SFX.BitHack.CSharp
+open SFX.CSharp.BitHack
 
 /// Represents the erros that can occur when accessing a BitArray
 type BitAccessError =

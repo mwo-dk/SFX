@@ -1,8 +1,8 @@
-﻿using SFX.CSROP;
+﻿using SFX.CSharp.ROP;
 using System;
-using static SFX.CSROP.Library;
+using static SFX.CSharp.ROP.Library;
 
-namespace SFX.Utils.Infrastructure
+namespace SFX.CSharp.Utils.Infrastructure
 {
     /// <summary>
 	/// Implements <see cref="IDateTimeConverter"/>

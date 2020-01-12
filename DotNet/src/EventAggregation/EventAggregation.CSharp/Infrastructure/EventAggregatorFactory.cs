@@ -1,4 +1,4 @@
-﻿namespace SFX.EventAggregation.Infrastructure
+﻿namespace SFX.CSharp.EventAggregation.Infrastructure
 {
     /// <summary>
     /// Implements <see cref="IEventAggregatorFactory"/>

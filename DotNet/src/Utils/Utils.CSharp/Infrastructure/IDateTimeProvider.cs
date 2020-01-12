@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SFX.Utils.Infrastructure
+namespace SFX.CSharp.Utils.Infrastructure
 {
     /// <summary>
     /// Interface describing the capability to resolve current <see cref="DateTimeOffset"/> in UTC

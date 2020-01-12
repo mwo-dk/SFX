@@ -6,6 +6,7 @@
 
     <RootNamespace>SFX.Gower</RootNamespace>
     <PackageId>SFX.Gower</PackageId>
+    
     <Version>$(Version)</Version>
     <FileVersion>$(Version)</FileVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>

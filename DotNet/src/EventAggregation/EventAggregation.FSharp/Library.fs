@@ -3,8 +3,8 @@
 open System
 open System.Threading
 open SFX.ROP
-open SFX.EventAggregation.Model
-open SFX.EventAggregation.Infrastructure
+open SFX.CSharp.EventAggregation.Model
+open SFX.CSharp.EventAggregation.Infrastructure
 
 /// Creates an EventAggregator<>
 let createEventAggregator() = new EventAggregator<'a>()

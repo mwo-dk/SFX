@@ -1,4 +1,4 @@
-using SFX.EventAggregation.Infrastructure;
+using SFX.CSharp.EventAggregation.Infrastructure;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;

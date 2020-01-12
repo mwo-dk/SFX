@@ -1,4 +1,4 @@
-﻿using SFX.EventAggregation.Infrastructure;
+﻿using SFX.CSharp.EventAggregation.Infrastructure;
 using Xunit;
 
 namespace SFX.EventAggregation.Test.Unit.Infrastructure

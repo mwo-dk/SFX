@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SFX.CSROP
+namespace SFX.CSharp.ROP
 {
     /// <summary>
     /// Represents the result of an operation/invokation. It is not a full two track
@@ -54,15 +54,15 @@ namespace SFX.CSROP
         /// order to facilitate bridging between the F# sum-type and this simpler type
         /// </summary>
         /// <returns></returns>
-        public ROP.Bridge.Result<T> ToFSharpResult() =>
-            new ROP.Bridge.Result<T>(Value, Error);
+        public SFX.ROP.Bridge.Result<T> ToFSharpResult() =>
+            new SFX.ROP.Bridge.Result<T>(Value, Error);
 
         /// <summary>
         /// Implicit cast to briding type <see cref="ROP.Bridge.Result"/> in
         /// order to facilitate bridging between the F# sum-type and this simpler type
         /// </summary>
         /// <param name="x">The <see cref="Result{T}"/> to cast</param>
-        public static implicit operator ROP.Bridge.Result<T>(Result<T> x) =>
-            new ROP.Bridge.Result<T>(x.Value, x.Error);
+        public static implicit operator SFX.ROP.Bridge.Result<T>(Result<T> x) =>
+            new SFX.ROP.Bridge.Result<T>(x.Value, x.Error);
     }
 }

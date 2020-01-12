@@ -1,10 +1,10 @@
-﻿using System;
+﻿using SFX.CSharp.ROP;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using SFX.CSROP;
-using static SFX.CSROP.Library;
+using static SFX.CSharp.ROP.Library;
 
-namespace SFX.BitHack.CSharp
+namespace SFX.CSharp.BitHack
 {
     /// <summary>
 	/// Simple contract-less bit array class. In order to avoid usage of many nullable (extra bool flag)

@@ -30,7 +30,7 @@ namespace SFX.Random.CSharp
         /// Generates a random <see cref="short"/>
         /// </summary>
         /// <returns></returns>
-        public static short GetRandomShort() =>  CreateRandom(x => BitConverter.ToInt16(x, 0));
+        public static short GetRandomShort() => CreateRandom(x => BitConverter.ToInt16(x, 0));
         /// <summary>
         /// Generates a random <see cref="int"/>
         /// </summary>

@@ -1,5 +1,5 @@
 ﻿using FsCheck;
-using SFX.EventAggregation.Model;
+using SFX.CSharp.EventAggregation.Model;
 using System;
 using System.Linq;
 

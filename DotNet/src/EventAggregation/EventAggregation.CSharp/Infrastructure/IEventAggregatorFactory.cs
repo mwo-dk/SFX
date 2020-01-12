@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SFX.EventAggregation.Infrastructure
+namespace SFX.CSharp.EventAggregation.Infrastructure
 {
     /// <summary>
     /// Factory interface to create event aggregators

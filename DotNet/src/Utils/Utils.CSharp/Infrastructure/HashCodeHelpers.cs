@@ -1,10 +1,10 @@
-﻿using SFX.CSROP;
+﻿using SFX.CSharp.ROP;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using static SFX.CSROP.Library;
+using static SFX.CSharp.ROP.Library;
 
-namespace SFX.Utils.Infrastructure
+namespace SFX.CSharp.Utils.Infrastructure
 {
     /// <summary>
     /// Helpers to compute hashcodes

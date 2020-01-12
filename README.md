@@ -16,6 +16,7 @@ Programming languages are/will be:
 * **Random** basic utilities to generate random data based on [RNGCryptoServiceProvider](https://referencesource.microsoft.com/#mscorlib/system/security/cryptography/rngcryptoserviceprovider.cs,d525bf7d9ca1d38a). For details, see [the readme](doc/DotNet/README.Random.md)
 * **Gower** implementation of Gower similarity coefficient. For details, see [the readme](doc/DotNet/README.Gower.md)
 * **BitHack** basic library for bit array/vector utilization. For details, see [the readme](doc/DotNet/README.BitHack.md)
+* **System** wrapper of basic system services. For details, see [the readme](doc/DotNet/README.System.md)
 
 ## C/C++
 

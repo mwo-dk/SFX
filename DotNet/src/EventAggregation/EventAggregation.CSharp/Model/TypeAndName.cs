@@ -1,7 +1,7 @@
 ﻿using System;
-using static SFX.Utils.Infrastructure.HashCodeHelpers;
+using static SFX.CSharp.Utils.Infrastructure.HashCodeHelpers;
 
-namespace SFX.EventAggregation.Model
+namespace SFX.CSharp.EventAggregation.Model
 {
     /// <summary>
     /// Represents the combination of a type name of an <see cref="IEventAggregator{T}"/>

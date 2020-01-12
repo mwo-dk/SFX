@@ -1,7 +1,8 @@
+using SFX.CSharp.BitHack;
 using System;
 using System.Linq;
 using Xunit;
-using static SFX.BitHack.CSharp.BitVectorHelpers;
+using static SFX.CSharp.BitHack.BitVectorHelpers;
 
 namespace SFX.BitHack.CSharp.Tests
 {

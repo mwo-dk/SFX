@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks.Dataflow;
 using static System.Threading.Interlocked;
 
-namespace SFX.EventAggregation.Infrastructure
+namespace SFX.CSharp.EventAggregation.Infrastructure
 {
     /// <summary>
     /// Implements <see cref="IEventAggregator{T}"/>
