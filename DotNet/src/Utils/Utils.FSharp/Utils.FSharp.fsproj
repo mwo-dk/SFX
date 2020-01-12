@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>SFX.Utils</AssemblyName>
+
+    <RootNamespace>SFX.Utils</RootNamespace>
+    <PackageId>SFX.Utils</PackageId>
+    <Version>$(Version)</Version>
+    <FileVersion>$(Version)</FileVersion>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <IsPackable>true</IsPackable>
+
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Authors>Michael W. Olesen</Authors>
+    <Company>-</Company>
+    <Description>A small library facilitating simple utility functions</Description>
+    <Copyright>Michael W. Olesen</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/mwo-dk/SFX.Utils</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mwo-dk/SFX.Utils</RepositoryUrl>
+    <PackageIcon>dingir.png</PackageIcon>
+    <PackageTags>utilities F#</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Library.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="dingir.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ROP\ROP.FSharp\ROP.FSharp.fsproj" />
+    <ProjectReference Include="..\Utils.CSharp\Utils.CSharp.csproj" />
+  </ItemGroup>
+
+</Project>

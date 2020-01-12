@@ -50,6 +50,14 @@ namespace SFX.CSROP
         }
 
         /// <summary>
+        /// Cast to briding type <see cref="ROP.Bridge.Result"/> in
+        /// order to facilitate bridging between the F# sum-type and this simpler type
+        /// </summary>
+        /// <returns></returns>
+        public ROP.Bridge.Result<T> ToFSharpResult() =>
+            new ROP.Bridge.Result<T>(Value, Error);
+
+        /// <summary>
         /// Implicit cast to briding type <see cref="ROP.Bridge.Result"/> in
         /// order to facilitate bridging between the F# sum-type and this simpler type
         /// </summary>
