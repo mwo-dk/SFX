@@ -1,5 +1,11 @@
 <Project>
 	<PropertyGroup>
-		<Version>1.0.20</Version>
+		<Version>1.0.21</Version>
+    <Authors>Michael W. Olesen</Authors>
+    <Copyright>Michael W. Olesen</Copyright>
+    <Company>-</Company>
+    <PackageLicenseExpression>false</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/mwo-dk/SFX</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mwo-dk/SFX</RepositoryUrl>
 	</PropertyGroup>
 </Project>
