@@ -21,6 +21,9 @@
     <RepositoryUrl>https://github.com/mwo-dk/SFX.Utils</RepositoryUrl>
     <PackageIcon>dingir.png</PackageIcon>
     <PackageTags>utilities F#</PackageTags>
+
+
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,8 +34,17 @@
     <None Include="dingir.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
+  <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+    </ItemGroup>
+  </Target>
+  
   <ItemGroup>
-    <ProjectReference Include="..\..\ROP\ROP.FSharp\ROP.FSharp.fsproj" />
+    <ProjectReference Include="..\..\ROP\ROP.FSharp\ROP.FSharp.fsproj">
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <IncludeAssets>SFX.Utils.CSharp.dll</IncludeAssets>
+    </ProjectReference>
     <ProjectReference Include="..\Utils.CSharp\Utils.CSharp.csproj" />
   </ItemGroup>
 

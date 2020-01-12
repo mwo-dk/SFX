@@ -21,7 +21,6 @@
     <PackageIcon>dingir.png</PackageIcon>
 
     <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
-  
 </PropertyGroup>
 
   <ItemGroup>
@@ -33,10 +32,11 @@
       <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
     </ItemGroup>
   </Target>
+  
   <ItemGroup>
     <ProjectReference Include="..\ROP.FSharp\ROP.FSharp.fsproj">
       <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>SFX.ROP.FSharp.dll</IncludeAssets>
+      <IncludeAssets>ROP.FSharp.dll</IncludeAssets>
     </ProjectReference>
   </ItemGroup>
 </Project>
