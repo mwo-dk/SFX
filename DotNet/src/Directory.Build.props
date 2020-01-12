@@ -5,7 +5,6 @@
     <Copyright>Michael W. Olesen</Copyright>
     <Company>-</Company>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/mwo-dk/SFX</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mwo-dk/SFX</RepositoryUrl>
 	</PropertyGroup>

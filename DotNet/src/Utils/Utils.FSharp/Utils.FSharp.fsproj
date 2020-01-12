@@ -16,7 +16,7 @@
     <Description>A small library facilitating simple utility functions</Description>
     <Copyright>$(Copyright)</Copyright>
     <PackageLicenseExpression>$(PackageLicenseExpression)</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>$(PackageRequireLicenseAcceptance)</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/mwo-dk/SFX</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mwo-dk/SFX</RepositoryUrl>
     <PackageIcon>dingir.png</PackageIcon>
