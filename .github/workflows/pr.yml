@@ -22,6 +22,8 @@ jobs:
         dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.TestHelpers.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
         dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.ROP.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
         dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.ROP.CSharp.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
+        dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.BitHack.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
+        dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.BitHack.CSharp.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
         dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.Utils.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
         dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.Utils.CSharp.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
         dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.EventAggregation.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
