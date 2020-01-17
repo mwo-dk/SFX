@@ -3,35 +3,18 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     
-    <AssemblyName>SFX.Random</AssemblyName>
-    <RootNamespace>SFX.Random</RootNamespace>
+    <AssemblyName>SFX.Random.FSharp</AssemblyName>
     <PackageId>SFX.Random</PackageId>
     
-    <Version>$(Version)</Version>
     <FileVersion>$(Version)</FileVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>
     <IsPackable>true</IsPackable>
 
-    <Authors>$(Authors)</Authors>
-    <Company>$(Company)</Company>
     <Description>A small utilizing RNGCryptoServiceProvider as a standard random generator</Description>
-    <Copyright>$(Copyright)</Copyright>
-    <PackageLicenseExpression>$(PackageLicenseExpression)</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>https://github.com/mwo-dk/SFX</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/mwo-dk/SFX</RepositoryUrl>
-    <PackageIcon>dingir.png</PackageIcon>
     <PackageTags>random RNGCryptoServiceProvider F#</PackageTags>
-
-    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+    <PackageIcon>dingir.png</PackageIcon>
   </PropertyGroup>
 
-  <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
-    <ItemGroup>
-      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
-    </ItemGroup>
-  </Target>
-  
   <ItemGroup>
     <Compile Include="Library.fs" />
   </ItemGroup>
@@ -41,10 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Random.CSharp\Random.CSharp.csproj">
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>SFX.Random.CSharp.dll</IncludeAssets>
-    </ProjectReference>
+    <ProjectReference Include="..\Random.CSharp\Random.CSharp.csproj"/>
   </ItemGroup>
 
 </Project>

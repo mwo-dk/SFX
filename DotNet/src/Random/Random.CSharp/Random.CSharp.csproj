@@ -5,12 +5,20 @@
     
     <AssemblyName>SFX.Random.CSharp</AssemblyName>
     <RootNamespace>SFX.CSharp.Random</RootNamespace>
-
-    <Version>$(Version)</Version>
+    <PackageId>SFX.Random</PackageId>
+    
     <FileVersion>$(Version)</FileVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>
-    <IsPackable>false</IsPackable>
+    <IsPackable>true</IsPackable>
+
+    <Description>A small utilizing RNGCryptoServiceProvider as a standard random generator</Description>
+    <PackageTags>random RNGCryptoServiceProvider C#</PackageTags>
+    <PackageIcon>dingir.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="dingir.png" Pack="true" PackagePath="\"/>
+  </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="System.Memory" Version="4.5.3" />
