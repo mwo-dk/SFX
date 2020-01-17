@@ -19,6 +19,6 @@ jobs:
       run: |
         dotnet pack ./DotNet/src/System/System.Windows.CSharp/System.Windows.CSharp.csproj --configuration Release --include-symbols -p:SymbolPackageFormat=snupkg -o ./nuget
         dotnet pack ./DotNet/src/System/System.Windows.FSharp/System.Windows.FSharp.fsproj --configuration Release --include-symbols -p:SymbolPackageFormat=snupkg -o ./nuget
-    - name: Deploy NuGet Packages
-      run: |
-        dotnet nuget push D:\a\SFX\SFX\nuget\SFX.System.Windows.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
+    #- name: Deploy NuGet Packages
+    #  run: |
+    #    dotnet nuget push D:\a\SFX\SFX\nuget\SFX.System.Windows.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
