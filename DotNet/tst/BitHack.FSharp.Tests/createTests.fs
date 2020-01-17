@@ -2,8 +2,8 @@ module createTests
 
 open FsCheck
 open FsCheck.Xunit
-open SFX.ROP
-open SFX.BitHack
+open SFX.FSharp.ROP
+open SFX.FSharp.BitHack
 
 [<Property>]
 let ``create with negative length works`` (length: NegativeInt, value: bool) =

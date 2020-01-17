@@ -1,125 +1,126 @@
-﻿module SFX.ROP
+﻿namespace SFX.FSharp
 
-/// The two-track type
-type Result<'TSuccess,'TFailure> = 
-| Success of 'TSuccess
-| Failure of 'TFailure
+module ROP =
 
-/// Convert a single value into a two-track result
-let succeed = Success
+    /// The two-track type
+    type Result<'TSuccess,'TFailure> = 
+    | Success of 'TSuccess
+    | Failure of 'TFailure
 
-/// Convert a single value into a two-track result
-let fail = Failure
+    /// Convert a single value into a two-track result
+    let succeed = Success
 
-/// Apply either a success function or failure function
-let either successFunc failureFunc twoTrackInput =
-    match twoTrackInput with
-    | Success s -> successFunc s
-    | Failure f -> failureFunc f
+    /// Convert a single value into a two-track result
+    let fail = Failure
 
-/// Convert a switch function into a two-track function
-let bind f = 
-    fail |> either f
+    /// Apply either a success function or failure function
+    let either successFunc failureFunc twoTrackInput =
+        match twoTrackInput with
+        | Success s -> successFunc s
+        | Failure f -> failureFunc f
 
-/// Pipe a two-track value into a switch function 
-let (>>=) x f = 
-    bind f x
+    /// Convert a switch function into a two-track function
+    let bind f = 
+        fail |> either f
 
-/// Compose two switches into another switch
-let (>=>) s1 s2 = 
-    s1 >> bind s2
+    /// Pipe a two-track value into a switch function 
+    let (>>=) x f = 
+        bind f x
 
-/// Convert a one-track function into a switch
-let switch f = 
-    f >> succeed
+    /// Compose two switches into another switch
+    let (>=>) s1 s2 = 
+        s1 >> bind s2
 
-/// Convert a one-track function into a two-track function
-let map f = 
-    either (f >> succeed) fail
+    /// Convert a one-track function into a switch
+    let switch f = 
+        f >> succeed
 
-/// Convert a dead-end function into a one-track function
-let tee f x = 
-    f x; x 
+    /// Convert a one-track function into a two-track function
+    let map f = 
+        either (f >> succeed) fail
 
-/// Convert a one-track function into a switch with exception handling
-let tryCatch f exnHandler x =
-    try
-        f x |> succeed
-    with
-    | ex -> exnHandler ex |> fail
+    /// Convert a dead-end function into a one-track function
+    let tee f x = 
+        f x; x 
 
-/// Convert two one-track functions into a two-track function
-let doubleMap successFunc failureFunc =
-    either (successFunc >> succeed) (failureFunc >> fail)
+    /// Convert a one-track function into a switch with exception handling
+    let tryCatch f exnHandler x =
+        try
+            f x |> succeed
+        with
+        | ex -> exnHandler ex |> fail
 
-/// Add two switches in parallel
-let plus addSuccess addFailure switch1 switch2 x = 
-    match (switch1 x),(switch2 x) with
-    | Success s1,Success s2 -> Success (addSuccess s1 s2)
-    | Failure f1,Success _  -> Failure f1
-    | Success _ ,Failure f2 -> Failure f2
-    | Failure f1,Failure f2 -> Failure (addFailure f1 f2)
+    /// Convert two one-track functions into a two-track function
+    let doubleMap successFunc failureFunc =
+        either (successFunc >> succeed) (failureFunc >> fail)
 
-/// Partitions a sequence of Result<,>s into successes and failures
-let partitionResults results =
-    let successes =
-        results |>
-        Seq.map (fun x ->
-            match x with
-            | Success value -> value |> Some
-            | _ -> None) |>
-        Seq.choose id |>
-        Seq.toArray
-    let failures = 
-        results |>
-        Seq.map (fun x ->
-            match x with
-            | Failure value -> value |> Some
-            | _ -> None) |>
-        Seq.choose id |>
-        Seq.toArray
-    (successes, failures)
+    /// Add two switches in parallel
+    let plus addSuccess addFailure switch1 switch2 x = 
+        match (switch1 x),(switch2 x) with
+        | Success s1,Success s2 -> Success (addSuccess s1 s2)
+        | Failure f1,Success _  -> Failure f1
+        | Success _ ,Failure f2 -> Failure f2
+        | Failure f1,Failure f2 -> Failure (addFailure f1 f2)
 
-/// Represents a combination of successes and failures. Used when partitioning
-/// multiple Result<,>s
-type PartialFailure<'TSuccess, 'TFailure> = 
-    {
-        Successes: 'TSuccess array
-        Failures: 'TFailure array
-    }
+    /// Partitions a sequence of Result<,>s into successes and failures
+    let partitionResults results =
+        let successes =
+            results |>
+            Seq.map (fun x ->
+                match x with
+                | Success value -> value |> Some
+                | _ -> None) |>
+            Seq.choose id |>
+            Seq.toArray
+        let failures = 
+            results |>
+            Seq.map (fun x ->
+                match x with
+                | Failure value -> value |> Some
+                | _ -> None) |>
+            Seq.choose id |>
+            Seq.toArray
+        (successes, failures)
 
-/// Simple constructor for PartialFailure<,>
-let private toPartialFailure successes failures =
-    {
-        Successes = successes
-        Failures = failures
-    }
+    /// Represents a combination of successes and failures. Used when partitioning
+    /// multiple Result<,>s
+    type PartialFailure<'TSuccess, 'TFailure> = 
+        {
+            Successes: 'TSuccess array
+            Failures: 'TFailure array
+        }
+
+    /// Simple constructor for PartialFailure<,>
+    let private toPartialFailure successes failures =
+        {
+            Successes = successes
+            Failures = failures
+        }
 
     
-/// Represents the summary of multiple Result<,>s. 
-/// Empty means that no results were present
-/// Partial means, that there is a combination of successes and failures
-/// Full means that everything failed
-type ResultSummary<'TSuccess, 'TFailure> =
-| Empty
-| Partial of PartialFailure<'TSuccess, 'TFailure>
-| Full  of 'TFailure array
+    /// Represents the summary of multiple Result<,>s. 
+    /// Empty means that no results were present
+    /// Partial means, that there is a combination of successes and failures
+    /// Full means that everything failed
+    type ResultSummary<'TSuccess, 'TFailure> =
+    | Empty
+    | Partial of PartialFailure<'TSuccess, 'TFailure>
+    | Full  of 'TFailure array
 
-/// Aggregates a Result<,> seq into a combined
-/// Result<'a array, ResultSummary<'a,'b>>
-let aggregateResults results =
-    let successes, failures = results |> partitionResults
-    match successes |> Array.isEmpty, failures |> Array.isEmpty with
-    | false, false ->
-        toPartialFailure successes failures |> Partial |> fail
-    | false, true ->
-        successes |> Seq.toArray |> succeed
-    | true, false ->
-        failures |> Full |> fail
-    | true, true ->
-        Empty |> fail
+    /// Aggregates a Result<,> seq into a combined
+    /// Result<'a array, ResultSummary<'a,'b>>
+    let aggregateResults results =
+        let successes, failures = results |> partitionResults
+        match successes |> Array.isEmpty, failures |> Array.isEmpty with
+        | false, false ->
+            toPartialFailure successes failures |> Partial |> fail
+        | false, true ->
+            successes |> Seq.toArray |> succeed
+        | true, false ->
+            failures |> Full |> fail
+        | true, true ->
+            Empty |> fail
 
-module Bridge =
     [<Struct>]
     type Result<'a> = {
         Value: 'a

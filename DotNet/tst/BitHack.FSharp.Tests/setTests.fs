@@ -2,8 +2,8 @@
 
 open FsCheck
 open FsCheck.Xunit
-open SFX.ROP
-open SFX.BitHack
+open SFX.FSharp.ROP
+open SFX.FSharp.BitHack
 
 [<Property>]
 let ```set with negative index works``(length: NonNegativeInt, index: NegativeInt) =

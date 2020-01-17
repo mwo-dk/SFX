@@ -2,7 +2,7 @@
 
 open Xunit
 open SFX.TestHelpers
-open SFX.ROP
+open SFX.FSharp.ROP
 
 [<Fact>]
 [<Trait("Category", "Unit")>]
