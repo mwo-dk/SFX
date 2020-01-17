@@ -6,33 +6,18 @@
     <AssemblyName>SFX.System.Windows</AssemblyName>
     <PackageId>SFX.System.Windows</PackageId>
     
-    <Version>$(Version)</Version>
     <FileVersion>$(Version)</FileVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>
     <IsPackable>true</IsPackable>
 
-    <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
-
-    <Authors>$(Authors)</Authors>
-    <Company>$(Company)</Company>
     <Description>A small library for working various system services in F#</Description>
-    <Copyright>$(Copyright)</Copyright>
-    <PackageLicenseExpression>$(PackageLicenseExpression)</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>https://github.com/mwo-dk/SFX</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/mwo-dk/SFX</RepositoryUrl>
     <PackageIcon>dingir.png</PackageIcon>
     <PackageTags>system F#</PackageTags>
 
-    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+
+    <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
   </PropertyGroup>
 
-  <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
-    <ItemGroup>
-      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
-    </ItemGroup>
-  </Target>
-  
   <ItemGroup>
     <Compile Include="Library.fs" />
   </ItemGroup>
