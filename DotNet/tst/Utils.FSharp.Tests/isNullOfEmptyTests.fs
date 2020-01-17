@@ -3,7 +3,7 @@
 open System
 open Xunit
 open FsCheck.Xunit
-open SFX.Utils.StringHelpers
+open SFX.FSharp.Utils.StringHelpers
 
 [<Property>]
 [<Trait("Category", "Unit")>]

@@ -1,7 +1,7 @@
 ﻿module failTest
 
 open Xunit
-open SFX.ROP
+open SFX.FSharp.ROP
 open FsCheck.Xunit
 
 [<Property>]

@@ -2,7 +2,7 @@
 
 open Xunit
 open FsCheck.Xunit
-open SFX.Gower
+open SFX.FSharp.Gower
 open SFX.TestHelpers
 
 [<Trait("Category", "Unit")>]

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Threading;
 
-namespace SFX.Random.CSharp
+namespace SFX.CSharp.Random
 {
     /// <summary>
     /// Helper class to generate random entities based on the <see cref="RNGCryptoServiceProvider"/>

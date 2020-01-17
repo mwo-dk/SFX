@@ -1,7 +1,6 @@
-﻿namespace SFX.Utils
+﻿namespace SFX.FSharp.Utils
 
-open SFX.ROP
-open SFX.ROP.Bridge
+open SFX.FSharp.ROP
 open SFX.CSharp.Utils.Infrastructure
 
 module Time =

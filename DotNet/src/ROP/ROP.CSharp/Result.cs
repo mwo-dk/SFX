@@ -54,15 +54,15 @@ namespace SFX.CSharp.ROP
         /// order to facilitate bridging between the F# sum-type and this simpler type
         /// </summary>
         /// <returns></returns>
-        public SFX.ROP.Bridge.Result<T> ToFSharpResult() =>
-            new SFX.ROP.Bridge.Result<T>(Value, Error);
+        public FSharp.ROP.Result<T> ToFSharpResult() =>
+            new FSharp.ROP.Result<T>(Value, Error);
 
         /// <summary>
         /// Implicit cast to briding type <see cref="ROP.Bridge.Result"/> in
         /// order to facilitate bridging between the F# sum-type and this simpler type
         /// </summary>
         /// <param name="x">The <see cref="Result{T}"/> to cast</param>
-        public static implicit operator SFX.ROP.Bridge.Result<T>(Result<T> x) =>
-            new SFX.ROP.Bridge.Result<T>(x.Value, x.Error);
+        public static implicit operator FSharp.ROP.Result<T>(Result<T> x) =>
+            new FSharp.ROP.Result<T>(x.Value, x.Error);
     }
 }

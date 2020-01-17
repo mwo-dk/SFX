@@ -1,7 +1,7 @@
 ﻿namespace Gower.Tests
 
 open Xunit
-open SFX.Gower
+open SFX.FSharp.Gower
 open SFX.TestHelpers
 open Helpers
 
