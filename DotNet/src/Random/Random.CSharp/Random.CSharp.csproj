@@ -5,7 +5,7 @@
     
     <AssemblyName>SFX.Random.CSharp</AssemblyName>
     <RootNamespace>SFX.CSharp.Random</RootNamespace>
-    <PackageId>SFX.Random</PackageId>
+    <PackageId>SFX.Random.CSharp</PackageId>
     
     <FileVersion>$(Version)</FileVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>
