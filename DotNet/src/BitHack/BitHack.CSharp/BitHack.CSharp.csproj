@@ -2,14 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    
+
     <AssemblyName>SFX.BitHack.CSharp</AssemblyName>
     <RootNamespace>SFX.CSharp.BitHack</RootNamespace>
+    <PackageId>SFX.BitHack.CSharp</PackageId>
     
-    <Version>$(Version)</Version>
     <FileVersion>$(Version)</FileVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>
-    <IsPackable>false</IsPackable>
+    <IsPackable>true</IsPackable>
+
+    <Description>A small library for working with bit-arrays based on 64 bit signed integers</Description>
+    <PackageTags>bit array F#</PackageTags>
+    <PackageIcon>dingir.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,9 +21,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ROP\ROP.CSharp\ROP.CSharp.csproj">
-      <IncludeAssets>all</IncludeAssets>
-    </ProjectReference>
+    <None Include="dingir.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ROP\ROP.CSharp\ROP.CSharp.csproj"/>
   </ItemGroup>
 
 </Project>
