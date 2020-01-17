@@ -5,12 +5,16 @@
     
     <AssemblyName>SFX.System.Windows.CSharp</AssemblyName>
     <RootNamespace>SFX.CSharp.System.Windows</RootNamespace>
-
-    <Version>$(Version)</Version>
+    <PackageId>SFX.System.Windows.CSharp</PackageId>
+    
     <FileVersion>$(Version)</FileVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>
-    <IsPackable>false</IsPackable>
+    <IsPackable>true</IsPackable>
 
+    <Description>A small library for working various system services</Description>
+    <PackageTags>system C#</PackageTags>
+    <PackageIcon>dingir.png</PackageIcon>
+    
     <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
   </PropertyGroup>
 
@@ -20,12 +24,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ROP\ROP.CSharp\ROP.CSharp.csproj">
-      <IncludeAssets>all</IncludeAssets>
-    </ProjectReference>
-    <ProjectReference Include="..\System.CSharp\System.CSharp.csproj">
-      <IncludeAssets>all</IncludeAssets>
-    </ProjectReference>
+    <None Include="dingir.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ROP\ROP.CSharp\ROP.CSharp.csproj"/>
+    <ProjectReference Include="..\System.CSharp\System.CSharp.csproj"/>
   </ItemGroup>
 
 </Project>

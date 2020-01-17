@@ -3,21 +3,25 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     
-    <AssemblyName>SFX.CSharp.System</AssemblyName>
-    <RootNamespace>SFX.System.CSharp</RootNamespace>
-
-    <Version>$(Version)</Version>
+    <AssemblyName>SFX.System.CSharp</AssemblyName>
+    <RootNamespace>SFX.CSharp.System</RootNamespace>
+    <PackageId>SFX.System.CSharp</PackageId>
+    
     <FileVersion>$(Version)</FileVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>
-    <IsPackable>false</IsPackable>
+    <IsPackable>true</IsPackable>
+
+    <Description>A small library for working various system services</Description>
+    <PackageTags>system C#</PackageTags>
+    <PackageIcon>dingir.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ROP\ROP.CSharp\ROP.CSharp.csproj">
-      <IncludeAssets>all</IncludeAssets>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Utils\Utils.CSharp\Utils.CSharp.csproj">
-      <IncludeAssets>all</IncludeAssets>
-    </ProjectReference>
+    <None Include="dingir.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\ROP\ROP.CSharp\ROP.CSharp.csproj"/>
+    <ProjectReference Include="..\..\Utils\Utils.CSharp\Utils.CSharp.csproj"/>
   </ItemGroup>
 </Project>
