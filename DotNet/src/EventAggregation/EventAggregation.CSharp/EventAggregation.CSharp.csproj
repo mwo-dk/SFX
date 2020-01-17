@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     
-    <AssemblyName>SFX.EventAggregation.CSharp</AssemblyName>
     <RootNamespace>SFX.CSharp.EventAggregation</RootNamespace>
     <PackageId>SFX.EventAggregation.CSharp</PackageId>
 

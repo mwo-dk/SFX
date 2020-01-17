@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     
-    <AssemblyName>SFX.Random.CSharp</AssemblyName>
     <RootNamespace>SFX.CSharp.Random</RootNamespace>
     <PackageId>SFX.Random.CSharp</PackageId>
     
