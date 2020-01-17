@@ -2,28 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    
     <AssemblyName>SFX.Utils</AssemblyName>
-
-    <RootNamespace>SFX.Utils</RootNamespace>
     <PackageId>SFX.Utils</PackageId>
-    <Version>$(Version)</Version>
+    
     <FileVersion>$(Version)</FileVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>
     <IsPackable>true</IsPackable>
 
-    <Authors>$(Authors)</Authors>
-    <Company>$(Company)</Company>
     <Description>A small library facilitating simple utility functions</Description>
-    <Copyright>$(Copyright)</Copyright>
-    <PackageLicenseExpression>$(PackageLicenseExpression)</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>https://github.com/mwo-dk/SFX</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/mwo-dk/SFX</RepositoryUrl>
-    <PackageIcon>dingir.png</PackageIcon>
     <PackageTags>utilities F#</PackageTags>
-
-
-    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+    <PackageIcon>dingir.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -34,17 +23,8 @@
     <None Include="dingir.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
-  <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
-    <ItemGroup>
-      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
-    </ItemGroup>
-  </Target>
-  
   <ItemGroup>
-    <ProjectReference Include="..\..\ROP\ROP.FSharp\ROP.FSharp.fsproj">
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>SFX.Utils.CSharp.dll</IncludeAssets>
-    </ProjectReference>
+    <ProjectReference Include="..\..\ROP\ROP.FSharp\ROP.FSharp.fsproj"/>
     <ProjectReference Include="..\Utils.CSharp\Utils.CSharp.csproj" />
   </ItemGroup>
 

@@ -5,21 +5,27 @@
     
     <AssemblyName>SFX.EventAggregation.CSharp</AssemblyName>
     <RootNamespace>SFX.CSharp.EventAggregation</RootNamespace>
-    
-    <Version>$(Version)</Version>
+    <PackageId>SFX.EventAggregation.CSharp</PackageId>
+
     <FileVersion>$(Version)</FileVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>
-    <IsPackable>false</IsPackable>
+    <IsPackable>true</IsPackable>
+
+    <Description>A small library facilitating asynchronous event aggregation</Description>
+    <PackageTags>event aggregation C#</PackageTags>
+    <PackageIcon>dingir.png</PackageIcon>
   </PropertyGroup>
   
   <ItemGroup>
     <PackageReference Include="System.Threading.Tasks.Dataflow" Version="4.11.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="dingir.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\..\Utils\Utils.CSharp\Utils.CSharp.csproj">
-      <IncludeAssets>all</IncludeAssets>
-    </ProjectReference>
+    <ProjectReference Include="..\..\Utils\Utils.CSharp\Utils.CSharp.csproj"/>
   </ItemGroup>
 
 </Project>
