@@ -1,7 +1,7 @@
 # SFX.EventAggregation
-Simple event aggregator library for event aggregation in F# and C#. Can be found on nuget: [SFX.EventAggregation](https://www.nuget.org/packages/SFX.EventAggregation/).
+Simple event aggregator libraries for event aggregation in F# and C#. Can be found on nuget: [SFX.EventAggregation](https://www.nuget.org/packages/SFX.EventAggregation/) and [SFX.EventAggregation.CSharp](https://www.nuget.org/packages/SFX.EventAggregation.CSharp/).
 
-The library simply facilitates strongly typed event aggregators, that:
+The libraries simply facilitates strongly typed event aggregators, that:
 
 * Lets entities subscribe and unsubscribe to typed events in a synchronous and asynchronous manner, meaning it is an in process event/message bus.
 * Lets entities publish events on the bus.
@@ -17,7 +17,7 @@ The typical usage of an event aggregator is in long-running processes and/or app
 The class ```EventAggregator<>``` implements the following contract:
 
 ``` csharp
-namespace SFX.EventAggregation.Infrastructure
+namespace SFXCSharp.EventAggregation.Infrastructure
 {
     /// <summary>
     /// Interface describing the capability to subscribe to, unsubscribe from and publish on a given in memory
@@ -138,7 +138,7 @@ As can be seen, this is a very basic way to hook up parts of your application - 
 Implements the following contract:
 
 ``` csharp
-namespace SFX.EventAggregation.Infrastructure
+namespace SFX.CSharp.EventAggregation.Infrastructure
 {
     /// <summary>
     /// Interface to supply event aggregators

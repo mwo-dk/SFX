@@ -1,6 +1,6 @@
 # SFX.Utils
 
-Basic helper routines. The repository contains packages for F# as well as C#, and are exposed in the nuget package [SFX.Utils](https://www.nuget.org/packages/SFX.Utils/).
+Basic helper routines. The repository contains packages for F# as well as C#, and are exposed in the nuget packages [SFX.Utils](https://www.nuget.org/packages/SFX.Utils/) and [SFX.Utils.CSharp](https://www.nuget.org/packages/SFX.Utils.CSharp/).
 
 ## Usage C#
 
@@ -41,7 +41,7 @@ public interface ITimeZoneProvider
 }
 ``` 
 
-Again, no explanation should be required here. ```FindSystemTimeZoneById``` returns an ```Result<TimeZoneInfo>```, which is due to the fact, that the underlying call to the static method by the same name in ```TimeZoneInfo``` can throw exceptions. ```Result<>``` gives the caller the option of what kind of usage pattern to use. ```Result<>``` is a loan from [SFX.ROP](https://www.nuget.org/packages/SFX.ROP/) and introduced below.
+Again, no explanation should be required here. ```FindSystemTimeZoneById``` returns an ```Result<TimeZoneInfo>```, which is due to the fact, that the underlying call to the static method by the same name in ```TimeZoneInfo``` can throw exceptions. ```Result<>``` gives the caller the option of what kind of usage pattern to use. ```Result<>``` is a loan from [SFX.ROP.CSharp](https://www.nuget.org/packages/SFX.ROP.CSharp/) and introduced below.
 
 #### (I)DateTimeConverter
 
@@ -218,7 +218,7 @@ Result<T> f() {
 
 The F# library delivers a few modules that essentially mostly wrap the C# library.
 
-### SFX.Utils.Time
+### SFX.FSharp.Utils.Time
 The ```Time``` module is simply a wrapper around the similar methods in the corresponding C# library:
 
 * ```createDateTimeProvider: unit -> DateTimeProvider```
@@ -232,7 +232,7 @@ The ```Time``` module is simply a wrapper around the similar methods in the corr
 
 which do what you would expect.
 
-### SFX.Utils.Timer
+### SFX.FSharp.Utils.Timer
 The ```Timer``` module is also a more functional wrapper around the timer library:
 
 * ```createTimerProvider: unit -> TimerProvider```, creates a new ```TimerProvider```.
@@ -252,7 +252,7 @@ type TimerError =
 
 Mind that ```ITimer``` is ```IDisposable```. 
 
-### SFX.Utils.Initializable
+### SFX.FSharp.Utils.Initializable
 The ```Initializable``` module contains two functions:
 
 * ```initialize: InitializableObject -> Result<unit, InitializationError>```
@@ -276,7 +276,7 @@ type InitializationError =
 | InitializationCheckFailed of exn
 ```
 
-### SFX.Utils.Initializer
+### SFX.FSharp.Utils.Initializer
 The ```Initializer``` module is similar to ```Initializable```:
 
 * ```initialize: InitializerObject -> Result<unit, exn>```
@@ -288,7 +288,7 @@ type InitializerObject =
 | Sync of IInitializer
 | Async of IAsyncInitializer
 ```
-### SFX.Utils.HashHelpers
+### SFX.FSharp.Utils.HashHelpers
 The ```HashHelpers``` module simply provides a hashing function with the primes 19 and 31:
 
 * ```hash: HashArgs -> Result<int, HashError>```
@@ -315,7 +315,7 @@ type HashError =
 | IsEmpty
 ```
 
-### SFX.Utils.StringHelpers
+### SFX.FSharp.Utils.StringHelpers
 The ```StringHelpers``` simply wraps two commonly used members of ```System.String```:
 
 * ```isNullOrEmpty: string -> bool``` and

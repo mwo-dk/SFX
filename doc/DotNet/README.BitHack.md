@@ -146,8 +146,6 @@ As mentioned above, the accessor methods, do not directly return void (setting v
 * Utilize tuple deconstruction - as shown above
 * Directly casting the result to the bool or ```Unit``` type and rely on exceptions to be thrown in case of access violation.
 
-This type - like ```Unit``` is defined in [SFX.ROP.CSharp.Types](https://www.nuget.org/packages/SFX.ROP.CSharp.Types/).
-
 ### BitVectorHelpers
 
 The core logic of accessing and modifying arrays of bits represented by 64 bit signed integers, is implemented in the static class ```BitVectorHelpers```, whose methods are:

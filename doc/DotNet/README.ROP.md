@@ -1,14 +1,13 @@
 # SFX.ROP
 
-This repository contains a package supporting Railway Oriented Programming:
+This repository contains two packages supporting Railway Oriented Programming:
 
 * [SFX.ROP](https://www.nuget.org/packages/SFX.ROP/) is a copy  of the ROP library from F# for fun and profit.
     - See videos and slides [here](https://fsharpforfunandprofit.com/rop/)
     - See the detailed motivating blog post [here](https://fsharpforfunandprofit.com/posts/recipe-part2/)
+* [SFX.ROP.CSharp](https://www.nuget.org/packages/SFX.ROP.CSharp/) has a wanna-be implementation for C#
 
-The package also has a wanna-be implementation for C#
-
-## SFX.CSROP
+## SFX.CSharp.ROP
 
 Is a simple attempt to facilitate ROP in C#. It is facilitated via:
 
@@ -47,7 +46,7 @@ public struct Result<T>
 Which is not entirely unlike ```System.Nullable<>```. The usage is illustrated in the following:
 
 ``` csharp
-using static SFX.ROP.CSharp.Library
+using static SFX.CSharp.ROP.Library
 
 static Result<decimal> ComputeThatAmount(bool happy, decimal result) =>
     happy ? Succeed(result) : Fail<decimal>(new UnhappyException());
@@ -75,6 +74,6 @@ The library contains something very much like the F# library. A lot of static me
 
 ## Bridge
 
-In the F# library, there is a brigde function called ```toResult: SFX.CSROP.Result<'a> -> SFX.ROP.Result<'a,exn> ```, that converts the ```Result<>``` to a real F# sum-type. Similarly in the C# library, there is a function called ```ToResult```, that maps the other way.
+In the F# library, there is a brigde function called ```toResult: SFX.CSharp.ROP.Result<'a> -> SFX.FSharp.ROP.Result<'a,exn> ```, that converts the ```Result<>``` to a real F# sum-type. Similarly in the C# library, there is a function called ```ToResult```, that maps the other way.
 
-This makes it easy to utilize SFX.ROP.* in solutions with a variety of projects utilizing F# (ie for business logic) as well as C# (ie. for basic infra-structure, I/O et al).
+This makes it easy to utilize SFX.*.ROP.* in solutions with a variety of projects utilizing F# (ie for business logic) as well as C# (ie. for basic infra-structure, I/O et al).
