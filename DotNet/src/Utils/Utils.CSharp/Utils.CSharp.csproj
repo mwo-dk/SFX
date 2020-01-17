@@ -2,17 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    
     <AssemblyName>SFX.Utils.CSharp</AssemblyName>
-
     <RootNamespace>SFX.CSharp.Utils</RootNamespace>
     <PackageId>SFX.Utils.CSharp</PackageId>
-    <Version>$(Version)</Version>
-    <FileVersion>$(Version)</FileVersion>
-    <AssemblyVersion>$(Version)</AssemblyVersion>
-    <IsPackable>false</IsPackable>
+
+    <Description>A small library facilitating simple utility functions</Description>
+    <PackageTags>utilities C#</PackageTags>
+    <PackageIcon>dingir.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\ROP\ROP.CSharp\ROP.CSharp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="dingir.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>
