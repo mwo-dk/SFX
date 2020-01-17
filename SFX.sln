@@ -6,8 +6,10 @@ MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".solution", ".solution", "{C7511A83-EA73-4F3D-8B82-167F464CA3C7}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		.github\workflows\build-win.yml = .github\workflows\build-win.yml
 		.github\workflows\build.yml = .github\workflows\build.yml
 		DotNet\src\Directory.Build.props = DotNet\src\Directory.Build.props
+		.github\workflows\pr-win.yml = .github\workflows\pr-win.yml
 		.github\workflows\pr.yml = .github\workflows\pr.yml
 		README.md = README.md
 	EndProjectSection

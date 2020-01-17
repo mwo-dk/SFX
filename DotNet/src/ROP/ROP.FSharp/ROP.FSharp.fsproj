@@ -16,10 +16,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="dingir.png" Pack="true" PackagePath="\" />
+    <Compile Include="Library.fs" />
   </ItemGroup>
   
   <ItemGroup>
-    <Compile Include="Library.fs" />
+    <None Include="dingir.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>
