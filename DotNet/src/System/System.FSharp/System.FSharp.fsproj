@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     
-    <AssemblyName>SFX.System.FSharp</AssemblyName>
     <PackageId>SFX.System</PackageId>
     
     <FileVersion>$(Version)</FileVersion>

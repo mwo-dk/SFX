@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
 
-    <AssemblyName>SFX.BitHack.CSharp</AssemblyName>
     <RootNamespace>SFX.CSharp.BitHack</RootNamespace>
     <PackageId>SFX.BitHack.CSharp</PackageId>
     

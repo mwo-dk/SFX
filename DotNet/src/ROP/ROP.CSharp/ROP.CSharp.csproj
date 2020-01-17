@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
 
-    <AssemblyName>SFX.ROP.CSharp</AssemblyName>
     <RootNamespace>SFX.CSharp.ROP</RootNamespace>
     <PackageId>SFX.ROP.CSharp</PackageId>
 

@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     
-    <AssemblyName>SFX.Gower.CSharp</AssemblyName>
     <RootNamespace>SFX.CSharp.Gower</RootNamespace>
     <PackageId>SFX.Gower.CSharp</PackageId>
     
