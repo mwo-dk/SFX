@@ -21,4 +21,3 @@ jobs:
     - name: Deploy NuGet Packages
       run: |
         dotnet nuget push D:\a\SFX\SFX\nuget\SFX.System.Windows.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
-        dotnet nuget push D:\a\SFX\SFX\nuget\SFX.System.Windows.CSharp.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
