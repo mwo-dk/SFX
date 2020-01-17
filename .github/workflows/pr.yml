@@ -25,6 +25,6 @@ jobs:
         #dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.Utils.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
         #dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.EventAggregation.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
         #dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.Random.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
-        #dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.Gower.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.Gower.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
-        #dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.Gower.CSharp.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
+        dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.Gower.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.Gower.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
+        dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.Gower.CSharp.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
         #dotnet nuget push /home/runner/work/SFX/SFX/nuget/SFX.System.*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}

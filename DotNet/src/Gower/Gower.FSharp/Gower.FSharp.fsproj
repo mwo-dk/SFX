@@ -2,26 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <AssemblyName>SFX.Gower</AssemblyName>
-
-    <RootNamespace>SFX.Gower</RootNamespace>
+    
+    <AssemblyName>SFX.Gower.FSharp</AssemblyName>
     <PackageId>SFX.Gower</PackageId>
     
-    <Version>$(Version)</Version>
     <FileVersion>$(Version)</FileVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>
     <IsPackable>true</IsPackable>
 
-    <Authors>$(Authors)</Authors>
-    <Company>$(Company)</Company>
     <Description>A small library for computing Gower similarity coefficients in F#</Description>
-    <Copyright>$(Copyright)</Copyright>
-    <PackageLicenseExpression>$(PackageLicenseExpression)</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>https://github.com/mwo-dk/SFX</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/mwo-dk/SFX</RepositoryUrl>
-    <PackageIcon>dingir.png</PackageIcon>
     <PackageTags>Gower similarity coefficient F#</PackageTags>
+    <PackageIcon>dingir.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
