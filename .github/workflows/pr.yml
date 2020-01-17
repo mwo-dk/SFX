@@ -1,4 +1,4 @@
-name: .NET Core
+name: Pull Request Common
 
 on:  pull_request
 
