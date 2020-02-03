@@ -1,4 +1,4 @@
-﻿namespace SFX.FSharp
+namespace SFX.FSharp
 
 module Gower =
 
@@ -77,22 +77,22 @@ module Gower =
     /// Appends the denoted dichotomous (binary) - as asymmetric - character to the GowerConfiguration
     let withAsymmetricDichotomousCharacter c conf =
         match conf.AsymmetricDichotomous with
-        | Some l -> {conf with AsymmetricDichotomous = c::l |> Some}
+        | Some l -> {conf with AsymmetricDichotomous = l@[c] |> Some}
         | None -> {conf with AsymmetricDichotomous = [c] |> Some}
     /// Appends the denoted dichotomous (binary) - as symmetric - character to the GowerConfiguration
     let withSymmetricDichotomousCharacter c conf =
         match conf.SymmetricDichotomous with
-        | Some l -> {conf with SymmetricDichotomous = c::l |> Some}
+        | Some l -> {conf with SymmetricDichotomous = l@[c] |> Some}
         | None -> {conf with SymmetricDichotomous = [c] |> Some}
     /// Appends the denoted qualitative (ordinal) character to the GowerConfiguration
     let withQualitativeCharacter c conf =
         match conf.Qualitative with
-        | Some l -> {conf with Qualitative = c::l |> Some}
+        | Some l -> {conf with Qualitative = l@[c] |> Some}
         | None -> {conf with Qualitative = [c] |> Some}
     /// Appends the denoted quantitagive (interval) character to the GowerConfiguration
     let withQuantitativeCharacter c conf =
         match conf.Quantitative with
-        | Some l -> {conf with Quantitative = c::l |> Some}
+        | Some l -> {conf with Quantitative = l@[c] |> Some}
         | None -> {conf with Quantitative = [c] |> Some}
 
     let internal getSij x =
