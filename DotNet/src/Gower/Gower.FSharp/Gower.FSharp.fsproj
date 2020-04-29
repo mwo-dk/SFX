@@ -20,6 +20,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="dingir.png" Pack="true" PackagePath="\"/>
+    <None Include="dingir.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="4.7.1" />
   </ItemGroup>
 </Project>

@@ -23,8 +23,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ROP\ROP.FSharp\ROP.FSharp.fsproj"/>
-    <ProjectReference Include="..\EventAggregation.CSharp\EventAggregation.CSharp.csproj"/>
+    <ProjectReference Include="..\..\ROP\ROP.FSharp\ROP.FSharp.fsproj" />
+    <ProjectReference Include="..\EventAggregation.CSharp\EventAggregation.CSharp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="4.7.1" />
   </ItemGroup>
 
 </Project>

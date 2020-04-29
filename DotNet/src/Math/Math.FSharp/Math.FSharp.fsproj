@@ -3,28 +3,27 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
 
-    <RootNamespace>SFX.CSharp.BitHack</RootNamespace>
-    <PackageId>SFX.BitHack.CSharp</PackageId>
-    
+    <RootNamespace>SFX.FSharp.Math</RootNamespace>
+    <PackageId>SFX.Math.FSharp</PackageId>
+
     <FileVersion>$(Version)</FileVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>
     <IsPackable>true</IsPackable>
 
-    <Description>A small library for working with bit-arrays based on 64 bit signed integers</Description>
+    <Description>A small library with implementations of big number types and mathematical formulae</Description>
     <PackageTags>bit array C#</PackageTags>
     <PackageIcon>dingir.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Memory" Version="4.5.4" />
+    <None Include="Script1.fsx" />
+    <Compile Include="Helpers.fs" />
+    <Compile Include="Types.fs" />
+    <Compile Include="Rational.fs" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="dingir.png" Pack="true" PackagePath="\" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\ROP\ROP.CSharp\ROP.CSharp.csproj" />
-  </ItemGroup>
-
+  
 </Project>
