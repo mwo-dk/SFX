@@ -23,8 +23,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ROP\ROP.FSharp\ROP.FSharp.fsproj"/>
+    <ProjectReference Include="..\..\ROP\ROP.FSharp\ROP.FSharp.fsproj" />
     <ProjectReference Include="..\Utils.CSharp\Utils.CSharp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="4.7.1" />
   </ItemGroup>
 
 </Project>
