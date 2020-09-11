@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".solution", ".solution", "{
 		.github\workflows\build-win.yml = .github\workflows\build-win.yml
 		.github\workflows\build.yml = .github\workflows\build.yml
 		DotNet\src\Directory.Build.props = DotNet\src\Directory.Build.props
+		global.json = global.json
 		.github\workflows\pr-win.yml = .github\workflows\pr-win.yml
 		.github\workflows\pr.yml = .github\workflows\pr.yml
 		README.md = README.md
@@ -99,9 +100,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".documentation", ".document
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Math", "Math", "{DA15E6D8-3146-4D3D-9861-EF280988CFB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math.CSharp", "DotNet\src\Math\Math.CSharp\Math.CSharp.csproj", "{8B5AF1BF-A330-4204-BF25-A36A67F916A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Math.CSharp", "DotNet\src\Math\Math.CSharp\Math.CSharp.csproj", "{8B5AF1BF-A330-4204-BF25-A36A67F916A8}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Math.FSharp", "DotNet\src\Math\Math.FSharp\Math.FSharp.fsproj", "{0793D5E7-8C1D-4317-B7CC-A4C6C91C3F67}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Math.FSharp", "DotNet\src\Math\Math.FSharp\Math.FSharp.fsproj", "{0793D5E7-8C1D-4317-B7CC-A4C6C91C3F67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
