@@ -14,7 +14,6 @@
     <PackageIcon>dingir.png</PackageIcon>
     <PackageTags>system F#</PackageTags>
 
-
     <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
   </PropertyGroup>
 
