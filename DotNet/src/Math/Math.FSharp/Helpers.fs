@@ -13,10 +13,10 @@ module Helpers =
         | _ -> fail()
 
 
-    let internal infiniteAct acc f stop x =
-        let sequence = 
-            Seq.initInfinite()
-        0
+    //let internal infiniteAct acc f stop x =
+    //    let sequence = 
+    //        Seq.initInfinite()
+    //    0
     //let internal exp' one inc add mul stop x =
     //    let start = add one x
     //    let two = inc one
